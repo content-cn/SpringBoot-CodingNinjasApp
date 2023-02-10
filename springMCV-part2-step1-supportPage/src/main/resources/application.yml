@@ -1,0 +1,29 @@
+# 2.4 and above
+---
+spring:
+ profiles:
+  active: "dev"
+ mvc:
+  view:
+   prefix: "WEB-INF/jsp/"
+   suffix: ".jsp"
+server:
+ port: 8083
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+server:
+ port: 8087
+ 
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+server:
+ port: 8010
